@@ -74,12 +74,25 @@ int check_matching(const char *in) {
     return 1;
 }
 
-int main(void) {
-    char *p = "[201811210](경제학부){변해빈}";
-    if(check_matching(p) == 1)
-        printf("%s : 괄호검사성공 \n", p);
+void solve(char *str) {
+    if (check_matching(str) == 1)
+        printf("%s : 괄호검사성공 \n", str);
     else
-        printf("%s : 괄호검사실패 \n", p);
+        fprintf(stderr, "%s : 괄호검사실패 \n", str);
+
+}
+
+int main(void) {
+    char *a = "[201811210](경제학부){변해빈}";
+    char *b = "(자료구조론) 정말 [유익한] {강의}";
+    char *c = "[엄청난) 에러가 (발생해야 () 하는데...";
+    char *d = "[][][][]()()(){{}}{(()))}";
+    char *e = "괄호 ()는, C언어에서 중요해! [][]";
+    solve(a);
+    solve(b);
+    solve(c);
+    solve(d);
+    solve(e);
     return 0;
 }
 
