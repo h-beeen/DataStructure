@@ -16,9 +16,12 @@ void hanoi(int n, char dst, char tmp, char to) {
 }
 
 double power(double x, int n){
-    int i;
-    double result 1.0;
+    double result = 1.0;
     for(int i = 0; i < n; i++)
         result *= x;
     return result;
+}
+
+int main(void){
+    hanoi(4, 1, 3, 2);
 }
