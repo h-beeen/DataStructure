@@ -82,3 +82,9 @@ int main(void) {
         printf("%s : 괄호검사실패 \n", p);
     return 0;
 }
+
+/**
+* Expected
+ *
+ * [201811210](경제학부){변해빈} : 괄호검사성공
+*/
