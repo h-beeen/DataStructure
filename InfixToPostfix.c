@@ -41,6 +41,7 @@ element pop(StackType *s) {
         fprintf(stderr, "스택 공백 에러\n");
         exit(1);
     } else return s->data[(s->top)--];
+    // s->data[
 }
 
 element peek(StackType *s) {
